@@ -1,0 +1,11 @@
+<nav class="navbar navbar-expand bg-body-tertiary">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/">Pow</a>
+    <div class="navbar-nav">
+      <a class="nav-link {% if request.path == '/' %}active{% endif %}" href="{{ url_for('home') }}">Home</a>
+<a class="nav-link {% if request.path == '/about' %}active{% endif %}" href="{{ url_for('about') }}">About</a>
+<a class="nav-link {% if request.path == '/visit' %}active{% endif %}" href="{{ url_for('visit') }}">Visit</a>
+<a class="nav-link {% if request.path == '/registration' %}active{% endif %}" href="{{ url_for('register') }}">Register</a>
+    </div>
+  </div>
+</nav>

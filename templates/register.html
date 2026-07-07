@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+
+
+
+{% block welcome%} {% endblock %}
+{% block map%} {% endblock %}
+
+{% block content %}
+  <h2 align="left" style="color: #487d5e;">Registration Form</h2>
+  <form method='POST' action="/registration" style="max-width: 300px;">
+    <div class="mb-1">
+      <label for="exampleInputEmail1" class="form-label border-color: #0f0f10;"></label>
+      <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+    </div>
+    <div class="mb-1">
+      <label for="exampleInputPassword1" class="form-label border-color: #0f0f10;"></label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+    </div>
+
+      <div class="mb-1">
+      <label for="exampleInputDescription" class="form-label border-color: #0f0f10;"></label>
+      <input type="text" name="description" class="form-control" id="exampleInputDescription" placeholder="Description">
+    </div>
+
+    <div class="mb-3 form-check" style="color: #232526;">
+      <input type="checkbox" class="form-check-input" id="exampleCheck1" style="color: #292a2a; border-color: #0f0f10;">
+      <label  style="color: #c5c2c2;" class="form-check-label" for="exampleCheck1" >  
+          I accept the <a href="/terms" style="color: #169fdf;">terms and conditions</a>
+      </label>
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: #4f5252; border-color: #5ac7f9;">Submit</button>
+  </form>
+{%endblock%}
