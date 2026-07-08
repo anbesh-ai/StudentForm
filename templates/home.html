@@ -10,6 +10,15 @@ body {
 </style>
 {%endblock%}
 
+<div class="container">
+   
+   
+        {% for user in users %}
+            <li>{{ user.username }} - {{ user.description }}</li>
+        {% endfor %}
+ 
+</div>
+
 
 {% block map%} {% endblock %}
 {% block content%} {% endblock %}

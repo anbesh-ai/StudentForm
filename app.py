@@ -21,7 +21,8 @@ with app.app_context():
 
 @app.route('/')
 def home():
-    return render_template("home.html")
+    all_users = User.query.all()
+    return render_template("home.html", users=all_users)
 
 @app.route('/welcome')
 def welcome_page():
