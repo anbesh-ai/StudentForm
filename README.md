@@ -5,8 +5,8 @@ A small Flask web project I'm building to practice web development — user regi
 This is a personal learning/practice project, so the structure and features will keep evolving as I learn.
 
 ## Screenshot
-
-![./screenshots/flask_coding_illustration.png]
+<img width="1394" alt="Toh Tech Flask project illustration" src="./screenshots/flask_coding_illustration.png">
+![]
 
 
 
