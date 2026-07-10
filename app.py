@@ -60,23 +60,19 @@ def register():
 
 @app.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
-
     ADMIN_PASSWORD = "your-secret-password"
+    
     if request.method == 'POST':
         password = request.form.get('password')
         
         if password == ADMIN_PASSWORD:
             session['is_admin'] = True
             return redirect(url_for('show_users'))
-        return "Wrong passsword", 401
+        
+        flash('Wrong password, try again.', 'danger')
+        return redirect(url_for('admin_login'))
     
-    return redirect('admin_login')
-'''
-        <form method="post">
-            <input type="password" name="password" placeholder="Admin password">
-            <button type="submit">Login</button>
-        </form>
-    '''
+    return render_template('admin_login.html')
 
 
 @app.route('/admin/users')
