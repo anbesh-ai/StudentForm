@@ -60,7 +60,7 @@ def register():
 
 @app.route('/admin/login', methods=['GET', 'POST'])
 def admin_login():
-    ADMIN_PASSWORD = "your-secret-password"
+    ADMIN_PASSWORD = "pew_"
     
     if request.method == 'POST':
         password = request.form.get('password')
@@ -130,6 +130,12 @@ def delete_user(id):
     flash('User deleted successfully !' , "danger")
     return redirect(url_for('show_users'))
 
+@app.route('/admin/logout')
+def admin_logout():
+    session.pop('is_admin', None)
+    flash('You have been logged out.', 'success')
+    return redirect(url_for('admin_login'))
+
 
 if __name__ == "__main__":
-    app.run(port=5000)     
+    app.run(port=5000, debug="True")     
