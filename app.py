@@ -99,7 +99,7 @@ def add_user():
 
         flash("User added successfully !", "success")
         return redirect(url_for('show_users'))
-    return render_template('add_user.html')
+    return render_template('add_user_old.html')
 
 @app.route('/admin/users/edit/<int:id>', methods = ['GET','POST'])
 def edit_user(id):
