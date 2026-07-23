@@ -39,6 +39,24 @@ def about():
 def visit():
     return render_template("visit.html")
 
+#---NEW 4 ROUTES ADDED BELOW:
+
+@app.route('/contact')
+def contact():
+    return render_template("contact.html")
+
+@app.route('/notice')
+def notice():
+    return render_template("notice.html")
+
+@app.route('/gallery')
+def gallery():
+    return render_template("gallery.html")
+
+@app.route('/programs')
+def programs():
+    return render_template("programs.html")
+
 @app.route('/registration', methods=["GET", 'POST'])
 def register():
 
