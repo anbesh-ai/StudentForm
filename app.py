@@ -60,8 +60,6 @@ def programs():
 @app.route('/registration', methods=["GET", 'POST'])
 def register():
 
-   
-
     if request.method == 'POST':
         username = request.form.get('username')
         password = request.form.get('password')
@@ -92,7 +90,7 @@ def admin_login():
     
     return render_template('admin_login.html')
 
-
+#SHOW USERS
 @app.route('/admin/users')
 def show_users():
     if not session.get('is_admin'):

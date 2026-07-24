@@ -10,15 +10,15 @@
   <form method='POST' action="/registration" style="max-width: 300px;">
     <div class="mb-1">
       <label for="exampleInputEmail1" class="form-label border-color: #0f0f10;"></label>
-      <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+      <input type="text" name="username" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp"  style="border-color: #0f0f10;"  placeholder="Email">
     </div>
     <div class="mb-1">
-      <label for="exampleInputPassword1" class="form-label border-color: #0f0f10;"></label>
-      <input type="password" name="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+      <label for="exampleInputPassword1" class="form-label" style="border-color: #0f0f10;"></label>
+      <input type="password" name="password" class="form-control" id="exampleInputPassword1"  style="border-color: #0f0f10;" placeholder="Password">
     </div>
 
       <div class="mb-1">
-      <label for="exampleInputDescription" class="form-label border-color: #0f0f10;"></label>
+      <label for="exampleInputDescription" class="form-label" border-color: #0f0f10;"></label>
       <input type="text" name="description" class="form-control" id="exampleInputDescription" placeholder="Description">
     </div>
 
@@ -28,6 +28,6 @@
           I accept the <a href="/terms" style="color: #169fdf;">terms and conditions</a>
       </label>
     </div>
-    <button type="submit" class="btn btn-primary" style="background-color: #4f5252; border-color: #5ac7f9;">Submit</button>
+    <button type="submit" class="btn btn-primary" style="background-color: #22a753; border-color: #5ac7f9;">Submit</button>
   </form>
 {%endblock%}

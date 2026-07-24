@@ -1,34 +1,22 @@
-{% extends 'admin_base.html' %}
-
-{% block welcome %}
-
-{% endblock %}
-{% block map %}
-
-{% endblock %}
-
-{% block title %}
-  Edit User
-{% endblock %}
+{% extends 'base.html' %}
+{% block welcome %}{% endblock %}
+{% block title %}Edit User{% endblock %}
 
 {% block content %}
-<div class="admin-form-card">
-    <h1>Edit User</h1>
+  <h1>Edit User</h1>
 
-    <form method="POST">
-        <div class="admin-field">
-            <label>Username</label>
-            <input type="text" name="username" value="{{ user.username }}" required>
-        </div>
-        <div class="admin-field">
-            <label>Description</label>
-            <textarea name="description" rows="3">{{ user.description }}</textarea>
-        </div>
+  <form method="POST" class="col-md-6">
+    <div class="mb-3">
+      <label class="form-label">Username</label>
+      <input type="text" name="username" value="{{ user.username }}" class="form-control" required  />
+    </div>
 
-        <div class="admin-form-actions">
-            <button type="submit" class="btn-admin-primary">Save Changes</button>
-            <a href="{{ url_for('show_users') }}" class="btn-admin-cancel">Cancel</a>
-        </div>
-    </form>
-</div>
+    <div class="mb-3">
+      <label class="form-label">Description</label>
+      <textarea name="description" rows="3" class="form-control"   value="{{ user.description }}" >{{ user.description }} </textarea>
+    </div>
+
+    <button type="submit" class="btn btn-success">Save Changes</button>
+    <a href="{{ url_for('show_users') }}" class="btn btn-secondary">Cancel</a>
+  </form>
 {% endblock %}

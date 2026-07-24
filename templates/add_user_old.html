@@ -1,8 +1,5 @@
 {% extends "base.html" %}
 {% block welcome%}  {% endblock %}
-
-
-
 {% block title %}Add User{% endblock %}
 
 {% block content %}
@@ -23,6 +20,7 @@
         <label class="form-label">Description</label>
         <textarea name="description" class="form-control" rows="3"></textarea>
     </div>
+
     <button type="submit" class="btn btn-success">Add User</button>
     <a href="{{ url_for('show_users') }}" class="btn btn-secondary">Cancel</a>
 </form>
